@@ -1,0 +1,723 @@
+:root {
+  font-family: 'Söhne', 'Inter Tight', system-ui, sans-serif;
+  color: #edeff2;
+  background: #0a0b0d;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg: #0a0b0d;
+  --surface: rgba(17, 19, 24, 0.76);
+  --surface-strong: #111318;
+  --text: #edeff2;
+  --muted: #8a9099;
+  --border: rgba(230, 232, 235, 0.1);
+  --accent: #3b82f6;
+  --accent-soft: rgba(59, 130, 246, 0.18);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+  --mono: 'JetBrains Mono', monospace;
+  --editorial: 'Canela', 'Playfair Display', serif;
+  --max-width: 1240px;
+  --theme-transition: background-color 280ms ease, color 280ms ease, border-color 280ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.16), transparent 22%),
+    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.08), transparent 30%),
+    var(--bg);
+  color: var(--text);
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  background-image:
+    linear-gradient(rgba(138, 144, 153, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(138, 144, 153, 0.07) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black 28%, transparent 85%);
+}
+
+body::after {
+  background: linear-gradient(180deg, rgba(10, 11, 13, 0) 0%, rgba(10, 11, 13, 0.55) 75%, rgba(10, 11, 13, 0.92) 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+body,
+.line-panel,
+.project-card,
+.insight-card,
+.topology-shell,
+.final-cta,
+.hero-aside-block,
+.health-panel,
+.metadata-cursor,
+.site-header,
+.site-footer {
+  transition: var(--theme-transition);
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+.app-shell {
+  width: min(100%, calc(var(--max-width) + 64px));
+  margin: 0 auto;
+  padding: 24px 32px 40px;
+}
+
+.site-header,
+.site-footer,
+.section,
+.page-hero {
+  position: relative;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 0 28px;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.brand-mark {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.95), rgba(59, 130, 246, 0.2));
+  box-shadow: 0 0 22px rgba(59, 130, 246, 0.65);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.nav-link.is-active,
+.nav-link:hover {
+  color: var(--text);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  border-color: rgba(59, 130, 246, 0.35);
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.25), rgba(59, 130, 246, 0.12));
+  box-shadow: 0 10px 36px rgba(59, 130, 246, 0.18);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.page-shell {
+  animation: page-enter 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero,
+.page-hero,
+.section-grid,
+.project-grid,
+.capability-row,
+.site-footer,
+.dna-grid,
+.partner-grid,
+.insights-grid,
+.principles-grid,
+.credibility-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.hero {
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+  align-items: center;
+  min-height: calc(100vh - 150px);
+  padding: 72px 0 52px;
+}
+
+.hero-copy h1,
+.page-hero h1 {
+  margin: 0;
+  font-size: clamp(4rem, 6vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  max-width: 11ch;
+}
+
+.hero-subtitle {
+  margin: 18px 0 0;
+  color: var(--text);
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.section-copy,
+.line-panel p,
+.project-card p,
+.capability-row p,
+.partner-card p,
+.insight-card p {
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.75;
+}
+
+.hero-body {
+  max-width: 64ch;
+}
+
+.eyebrow,
+.micro-label,
+.health-label,
+.project-name,
+.insight-type {
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.eyebrow,
+.health-label,
+.project-name {
+  color: #aeb4bd;
+  font-size: 0.75rem;
+}
+
+.micro-label {
+  color: var(--accent);
+  font-size: 0.72rem;
+}
+
+.section {
+  padding: 56px 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-grid,
+.page-hero,
+.capability-row,
+.project-grid,
+.site-footer {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.page-hero {
+  padding: 88px 0 40px;
+  align-items: end;
+}
+
+.page-hero h1 {
+  max-width: 12ch;
+}
+
+.hero-aside {
+  max-width: 56ch;
+  justify-self: end;
+}
+
+.hero-aside-block {
+  margin-top: 20px;
+}
+
+.stack-lg,
+.stack-md {
+  display: grid;
+}
+
+.stack-lg {
+  gap: 22px;
+}
+
+.stack-md {
+  gap: 16px;
+}
+
+.button-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.signal-list,
+.detail-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.signal-list li,
+.detail-list li {
+  padding: 0 0 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.emphasis,
+.impact-copy {
+  color: var(--text);
+}
+
+.line-panel,
+.project-card,
+.insight-card,
+.topology-shell,
+.final-cta,
+.hero-aside-block {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+  box-shadow: var(--shadow);
+}
+
+.line-panel,
+.project-card,
+.insight-card,
+.hero-aside-block {
+  padding: 24px;
+}
+
+.topology-shell {
+  position: relative;
+  overflow: hidden;
+  min-height: 540px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(59, 130, 246, 0.18), transparent 35%),
+    linear-gradient(180deg, rgba(17, 19, 24, 0.96), rgba(10, 11, 13, 0.94));
+}
+
+.topology-shell::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 22px;
+}
+
+.topology-graph {
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+}
+
+.topology-edge {
+  stroke: url(#line-glow);
+  stroke-width: 0.35;
+  stroke-dasharray: 1.2 1.2;
+  animation: line-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes line-pulse {
+  0%,
+  100% {
+    opacity: 0.28;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+.topology-node-group {
+  animation: node-float 5.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes node-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.1px);
+  }
+}
+
+.topology-node {
+  fill: #dfe8ff;
+}
+
+.topology-pulse {
+  fill: rgba(59, 130, 246, 0.09);
+}
+
+.topology-pulse.active {
+  fill: rgba(59, 130, 246, 0.18);
+}
+
+.topology-pulse.secure {
+  fill: rgba(97, 219, 161, 0.16);
+}
+
+.health-panel {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  display: grid;
+  gap: 12px;
+  min-width: 220px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: rgba(8, 9, 11, 0.78);
+  backdrop-filter: blur(14px);
+}
+
+.health-panel strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.principles-grid,
+.credibility-grid,
+.partner-grid,
+.insights-grid,
+.dna-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.capability-row,
+.project-card,
+.philosophy-block,
+.final-cta {
+  padding: 28px 0;
+}
+
+.capability-row,
+.project-card {
+  border-top: 1px solid var(--border);
+}
+
+.capability-row h2,
+.project-card h2,
+.page-hero h1,
+.section h2,
+.insight-card h2,
+.hero-copy h1 {
+  font-weight: 600;
+}
+
+.project-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.project-name {
+  color: var(--accent);
+}
+
+.philosophy-block {
+  text-align: center;
+}
+
+.partner-card,
+.ecosystem-row {
+  min-height: 100%;
+}
+
+.compact-list li {
+  padding-bottom: 8px;
+}
+
+.chip-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.chip {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.insight-card {
+  min-height: 280px;
+}
+
+.insight-card h2 {
+  margin-top: 14px;
+  font-family: var(--editorial);
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.insight-type {
+  color: var(--accent);
+  font-size: 0.72rem;
+}
+
+.insight-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--text);
+}
+
+.final-cta {
+  margin-top: 32px;
+  border-radius: 30px;
+  padding: 10px 28px;
+}
+
+.inline-button {
+  width: fit-content;
+}
+
+.site-footer {
+  align-items: center;
+  padding: 32px 0 8px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-copy {
+  color: var(--muted);
+  max-width: 42ch;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+  justify-content: flex-end;
+  color: var(--muted);
+}
+
+.metadata-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: grid;
+  gap: 6px;
+  padding: 12px 14px;
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  border-radius: 14px;
+  background: rgba(9, 11, 14, 0.86);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.45);
+  pointer-events: none;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #dbe6ff;
+}
+
+@media (max-width: 1080px) {
+  .hero,
+  .page-hero,
+  .section-grid,
+  .project-grid,
+  .capability-row,
+  .site-footer,
+  .dna-grid,
+  .partner-grid,
+  .insights-grid,
+  .principles-grid,
+  .credibility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 52px;
+  }
+
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-copy h1,
+  .page-hero h1 {
+    max-width: 100%;
+  }
+
+  .hero-aside {
+    justify-self: start;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 18px 20px 32px;
+  }
+
+  .site-nav {
+    gap: 14px;
+  }
+
+  .hero-copy h1,
+  .page-hero h1 {
+    font-size: clamp(3rem, 14vw, 4.1rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .topology-shell,
+  .topology-graph {
+    min-height: 420px;
+  }
+
+  .health-panel {
+    left: 18px;
+    right: 18px;
+    min-width: 0;
+  }
+
+  .metadata-cursor {
+    display: none;
+  }
+}
+
+[data-theme='light'] {
+  --bg: #f7f7f5;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-strong: #ffffff;
+  --text: #0b0b0c;
+  --muted: #5a5f66;
+  --border: rgba(11, 11, 12, 0.09);
+  --accent: #0f62fe;
+  --accent-soft: rgba(15, 98, 254, 0.1);
+  --shadow: 0 24px 80px rgba(9, 16, 32, 0.08);
+  color: #0b0b0c;
+}
+
+[data-theme='light'] body {
+  background:
+    radial-gradient(circle at top right, rgba(15, 98, 254, 0.12), transparent 24%),
+    radial-gradient(circle at 20% 20%, rgba(15, 98, 254, 0.08), transparent 30%),
+    var(--bg);
+}
+
+[data-theme='light'] body::after {
+  background: linear-gradient(180deg, rgba(247, 247, 245, 0) 0%, rgba(247, 247, 245, 0.45) 75%, rgba(247, 247, 245, 0.95) 100%);
+}
+
+[data-theme='light'] .line-panel,
+[data-theme='light'] .project-card,
+[data-theme='light'] .insight-card,
+[data-theme='light'] .topology-shell,
+[data-theme='light'] .final-cta,
+[data-theme='light'] .hero-aside-block {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(249, 250, 251, 0.86));
+}
+
+[data-theme='light'] .health-panel,
+[data-theme='light'] .metadata-cursor {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text);
+}
+
+[data-theme='light'] .topology-shell {
+  background:
+    radial-gradient(circle at 50% 40%, rgba(15, 98, 254, 0.12), transparent 35%),
+    linear-gradient(180deg, rgba(240, 242, 248, 0.98), rgba(247, 247, 245, 0.96));
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text);
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
