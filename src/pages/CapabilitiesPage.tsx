@@ -8,17 +8,18 @@ function CapabilitiesPage() {
         eyebrow="Capabilities"
         title="Deploying intelligent systems into uncompromising environments."
         intro="We work where security, latency, compliance, and operating reality all matter at once. Each capability is designed as infrastructure, not presentation."
+        layout="stacked"
       />
 
-      <section className="section capability-list">
+      <section className="section clean-content-section">
+        <div className="capability-clean-grid">
         {capabilities.map((capability, index) => (
-          <article className="capability-row" key={capability.title}>
-            <div>
-              <p className="micro-label">0{index + 1}</p>
-              <h2>{capability.title}</h2>
-            </div>
+          <article className="content-card capability-clean-card" key={capability.title}>
+            <p className="micro-label">0{index + 1} Capability</p>
+            <h2>{capability.title}</h2>
+            <p className="section-copy">{capability.description}</p>
             <div className="stack-md">
-              <p className="section-copy">{capability.description}</p>
+              <p className="micro-label">Key outcomes</p>
               <ul className="detail-list">
                 {capability.details.map((detail) => (
                   <li key={detail}>{detail}</li>
@@ -27,6 +28,7 @@ function CapabilitiesPage() {
             </div>
           </article>
         ))}
+        </div>
       </section>
     </>
   )

@@ -5,11 +5,12 @@ interface PageHeroProps {
   title: string
   intro: string
   aside?: ReactNode
+  layout?: 'split' | 'stacked'
 }
 
-function PageHero({ eyebrow, title, intro, aside }: PageHeroProps) {
+function PageHero({ eyebrow, title, intro, aside, layout = 'split' }: PageHeroProps) {
   return (
-    <section className="page-hero">
+    <section className={`page-hero ${layout === 'stacked' ? 'page-hero-stacked' : ''}`}>
       <div>
         <p className="eyebrow">{eyebrow}</p>
         <h1>{title}</h1>

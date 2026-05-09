@@ -11,7 +11,7 @@ function getInitialTheme(): Theme {
   } catch {
     // localStorage unavailable
   }
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+  return 'light'
 }
 
 function applyTheme(theme: Theme) {

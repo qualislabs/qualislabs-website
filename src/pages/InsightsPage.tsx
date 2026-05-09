@@ -8,17 +8,20 @@ function InsightsPage() {
         eyebrow="Insights"
         title="Technical briefings and field notes."
         intro="Not blogs. These are operating memos for teams deploying intelligence where bandwidth, compliance, and system reliability shape every architectural decision."
+        layout="stacked"
       />
 
-      <section className="section insights-grid">
+      <section className="section clean-content-section">
+        <div className="insights-clean-grid">
         {insights.map((article) => (
-          <article className="insight-card" key={article.title}>
+          <article className="content-card insights-clean-card" key={article.title}>
             <p className="insight-type">{article.type}</p>
             <h2>{article.title}</h2>
             <p className="section-copy">{article.summary}</p>
             <span className="insight-link">Read briefing</span>
           </article>
         ))}
+        </div>
       </section>
     </>
   )

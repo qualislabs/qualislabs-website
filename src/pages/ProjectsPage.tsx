@@ -8,20 +8,21 @@ function ProjectsPage() {
         eyebrow="Projects"
         title="Systems deployed in the real world."
         intro="We do not build demos. Every system is designed for operational deployment and shaped around the actual failure modes of the environment it enters."
+        layout="stacked"
       />
 
-      <section className="section project-list">
+      <section className="section clean-content-section">
+        <div className="project-clean-grid">
         {projects.map((project) => (
-          <article className="project-card" key={project.name}>
-            <div className="project-heading">
+          <article className="content-card project-clean-card" key={project.name}>
+            <div className="project-clean-top">
               <div>
                 <p className="eyebrow">{project.tag}</p>
                 <h2>{project.headline}</h2>
               </div>
               <p className="project-name">{project.name}</p>
             </div>
-
-            <div className="project-grid">
+            <div className="stack-md">
               <p className="section-copy">{project.description}</p>
               <div className="stack-md">
                 <div>
@@ -40,12 +41,7 @@ function ProjectsPage() {
             </div>
           </article>
         ))}
-      </section>
-
-      <section className="section philosophy-block">
-        <p className="eyebrow">Projects Philosophy</p>
-        <h2>We do not build demos.</h2>
-        <p className="section-copy">Every system is designed for operational deployment.</p>
+        </div>
       </section>
     </>
   )
