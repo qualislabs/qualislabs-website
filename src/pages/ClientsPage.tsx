@@ -2,9 +2,9 @@ import PageHero from '../components/PageHero'
 import { partnerCategories } from '../data/siteContent'
 
 const ecosystem = [
-  'Cloud providers',
-  'Hardware vendors',
-  'Open-source ecosystems',
+  'Cloud and hosting platforms',
+  'Hardware and IoT toolchains',
+  'Open-source engineering ecosystems',
 ]
 
 function ClientsPage() {
@@ -12,8 +12,8 @@ function ClientsPage() {
     <>
       <PageHero
         eyebrow="Clients & Partners"
-        title="Trusted in high-stakes environments."
-        intro="We collaborate with organizations operating where failure is not an option—financial institutions, infrastructure providers, and emerging technology platforms."
+        title="Teams we build with and sectors we support."
+        intro="We work with founders, businesses, and institutions that need dependable engineering partners for both client-facing products and internal systems."
       />
 
       <section className="section partner-grid">
@@ -33,7 +33,7 @@ function ClientsPage() {
       <section className="section section-grid partner-ecosystem">
         <div>
           <p className="eyebrow">Partner Ecosystem</p>
-          <h2>Built on a carefully selected stack.</h2>
+          <h2>Technology stack and collaboration network.</h2>
         </div>
         <div className="stack-md">
           {ecosystem.map((item) => (

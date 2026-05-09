@@ -77,8 +77,8 @@ function App() {
         <div>
           <p className="eyebrow">Qualis Labs</p>
           <p className="footer-copy">
-            Production-grade AI and systems infrastructure for complex operating
-            environments.
+            Building intelligent products, software platforms, and hardware-enabled
+            systems from idea to deployment.
           </p>
         </div>
         <div className="footer-links">

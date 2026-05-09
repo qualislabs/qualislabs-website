@@ -32,104 +32,104 @@ export interface OperatingPrinciple {
 
 export const capabilities: Capability[] = [
   {
-    title: 'Sovereign AI & Confidential Computing',
+    title: 'AI + Embedded Systems Engineering',
     description:
-      'Your models are only as secure as the environment they run in. We deploy AI workloads inside cryptographically isolated execution environments using secure enclave technologies, so data stays protected during processing—not just at rest or in transit.',
-    details: ['Enclave-backed inference pipelines', 'Zero-trust AI execution', 'Regulatory-compliant architectures'],
+      'We design intelligent systems that combine software, electronics, and controls so products can run reliably in real operating environments.',
+    details: ['Model integration for edge and cloud workloads', 'Sensor and device data pipelines', 'Production-ready APIs and backend services'],
   },
   {
-    title: 'High-Throughput Fintech Infrastructure',
+    title: 'Product Engineering for Startups and Teams',
     description:
-      'Modern intelligence must integrate with rigid financial systems. We design distributed backends that bridge AI workloads with legacy rails—without introducing latency or downtime.',
-    details: ['gRPC microservices (Go / Spring Boot)', 'Core banking integrations', 'USSD + offline transaction orchestration'],
+      'From idea to launch, we help teams scope, build, and ship products with clean architecture, maintainable code, and a roadmap for scale.',
+    details: ['Web and mobile application development', 'Product architecture and MVP planning', 'Delivery support from prototype to launch'],
   },
   {
-    title: 'AI Governance & Guardrails',
+    title: 'Automation and Data-Driven Workflows',
     description:
-      'Unbounded AI is not deployable. We implement strict control layers around model behavior—ensuring outputs remain aligned, safe, and predictable under real-world usage.',
-    details: ['Prompt injection defense', 'Output validation pipelines', 'Policy-based routing systems'],
+      'We automate repetitive operations and turn scattered data into systems that support faster decisions and better service quality.',
+    details: ['Operational dashboards and analytics tooling', 'Workflow automation and integrations', 'Alerting, monitoring, and reporting systems'],
   },
   {
-    title: 'Edge AI & Distributed IoT Systems',
+    title: 'IoT, Robotics, and Hardware Prototyping',
     description:
-      'Not every system can rely on the cloud. We bring intelligence closer to the source—designing systems that operate offline and synchronize when possible.',
-    details: ['Custom hardware + PCB design', 'MQTT / CoAP architectures', 'Offline-first data synchronization'],
+      'Our mechatronics background lets us build beyond pure software: connected devices, control systems, and hardware-aware platforms.',
+    details: ['IoT device integration and telemetry systems', 'Embedded software and control logic', 'Rapid prototyping for product validation'],
   },
 ]
 
 export const projects: Project[] = [
   {
     name: 'Ujuzi',
-    tag: 'AI Infrastructure for Energy Optimization',
-    headline: 'Intelligent Power Distribution at Grid Edge',
+    tag: 'Energy Intelligence Platform',
+    headline: 'Smart Monitoring and Forecasting for Microgrids',
     description:
-      'Ujuzi is a production-grade AI system designed to optimize power distribution across unstable grid environments. Instead of relying on centralized forecasting, Ujuzi operates through distributed inference nodes deployed closer to consumption points. These nodes continuously analyze load patterns, predict failures, and dynamically rebalance energy allocation.',
-    markers: ['Edge-deployed ML inference (not cloud-only)', 'Works under intermittent connectivity', 'Integrates with existing utility infrastructure'],
-    impact: 'Reduced energy waste. Increased grid stability. Real-time adaptability.',
+      'Ujuzi is our energy project focused on monitoring, forecasting, and optimization for renewable and community microgrids. It combines IoT telemetry, predictive analytics, and actionable insights for operators and communities.',
+    markers: ['Real-time energy monitoring', 'AI-assisted demand prediction', 'Designed for practical field deployment'],
+    impact: 'Better visibility, better planning, and more efficient energy usage.',
   },
   {
-    name: 'Mavuno Link',
-    tag: 'AI-Native Agricultural Infrastructure',
-    headline: 'From Farm to Market, Without Information Loss',
+    name: 'Qwikeys',
+    tag: 'Mobility Marketplace Platform',
+    headline: 'Peer-to-Peer Car Sharing Built for Trust and Speed',
     description:
-      'Mavuno Link is not a marketplace. It is an intelligence layer for agricultural supply chains. The platform aggregates fragmented farm-level data, applies AI-driven demand forecasting, and coordinates distribution across buyers, transporters, and sellers—all within low-connectivity environments.',
-    markers: ['Offline-first data ingestion (USSD + mobile)', 'AI-driven pricing and demand signals', 'Logistics coordination embedded into system'],
-    impact: 'Reduced post-harvest loss. Fairer pricing. Predictable supply chains.',
+      'Qwikeys is our car hiring platform that connects vehicle owners and renters through a simple, secure booking experience. The product is designed for scale, trust, and smooth operations.',
+    markers: ['Marketplace booking workflows', 'Trust and safety-first product design', 'Built for growth across local markets'],
+    impact: 'Faster rentals, better host utilization, and a cleaner mobility experience.',
   },
 ]
 
 export const partnerCategories: PartnerCategory[] = [
   {
-    title: 'Financial Infrastructure',
-    description: 'Architecture support for institutions modernizing core transaction flows, security controls, and intelligent decision layers.',
-    references: ['Regional banking integrations', 'Confidential risk analysis workloads', 'Operational resilience tooling'],
+    title: 'Client Product Builds',
+    description: 'We partner with founders and teams to build digital products people can use, trust, and pay for.',
+    references: ['MVP and production system delivery', 'Feature expansion and performance improvements', 'Long-term engineering support'],
   },
   {
-    title: 'Energy & Utilities',
-    description: 'Systems for distributed monitoring, edge inference, and utility-grade orchestration in unstable grid environments.',
-    references: ['Grid edge intelligence pilots', 'Telemetry aggregation nodes', 'Failure prediction pipelines'],
+    title: 'Energy and Sustainability',
+    description: 'Our Ujuzi work demonstrates how data and AI can support practical renewable energy management.',
+    references: ['Telemetry capture and monitoring', 'Forecasting and operational insights', 'Community-focused deployment thinking'],
   },
   {
-    title: 'Agricultural Networks',
-    description: 'Low-connectivity systems linking producers, transporters, and buyers through reliable data infrastructure.',
-    references: ['Offline procurement tooling', 'Demand forecasting signals', 'Cold-chain coordination systems'],
+    title: 'Mobility and Marketplaces',
+    description: 'With Qwikeys, we are building product capabilities for high-trust transactional platforms.',
+    references: ['Booking and availability systems', 'Identity and trust UX patterns', 'Marketplace operations tooling'],
   },
   {
-    title: 'Technology Platforms',
-    description: 'Select partners building foundational hardware, cloud, and open-source capabilities that strengthen deployment quality.',
-    references: ['Cloud and bare-metal providers', 'Secure compute ecosystems', 'Embedded systems toolchains'],
+    title: 'Research and Prototyping',
+    description: 'We continue to explore practical R&D across AI, robotics, and intelligent systems inspired by our early lab projects.',
+    references: ['Rapid concept validation', 'Hardware-software integration experiments', 'Applied research into usable products'],
   },
 ]
 
 export const insights: Insight[] = [
   {
-    title: 'Why Most AI Fails in Low-Bandwidth Environments',
-    type: 'Field Briefing',
-    summary: 'A systems-level breakdown of where cloud-first assumptions collapse once connectivity becomes intermittent and data delivery loses consistency.',
+    title: 'What We Learned Building Ujuzi for Real-World Energy Operations',
+    type: 'Field Notes',
+    summary: 'A practical breakdown of telemetry quality, forecasting trade-offs, and deployment decisions that matter when systems run outside ideal lab conditions.',
   },
   {
-    title: 'Confidential Computing in Emerging Markets',
-    type: 'Technical Note',
-    summary: 'How enclave-backed execution changes the security model for regulated infrastructure without sacrificing deployability.',
+    title: 'How We Approach Product Architecture for Early-Stage Teams',
+    type: 'Engineering Memo',
+    summary: 'How we balance speed and maintainability when helping clients move from idea to reliable first release.',
   },
   {
-    title: 'Designing USSD Systems for Intelligent Workloads',
-    type: 'Architecture Memo',
-    summary: 'Patterns for routing low-bandwidth user input into observable, policy-constrained intelligence systems.',
+    title: 'Designing Trust Layers in Mobility Platforms like Qwikeys',
+    type: 'Product Brief',
+    summary: 'Patterns for booking flows, user verification, and operational safeguards that improve confidence for both hosts and renters.',
   },
 ]
 
 export const operatingPrinciples: OperatingPrinciple[] = [
   {
-    label: 'Execution isolation',
-    text: 'Hardware-backed boundaries for sensitive inference, transaction processing, and privileged system operations.',
+    label: 'Systems thinking',
+    text: 'We design software, electronics, and operations as one connected system, not separate silos.',
   },
   {
-    label: 'Asynchronous pipelines',
-    text: 'Throughput-optimized architectures that preserve resilience under unreliable networks and variable load.',
+    label: 'Build with intent',
+    text: 'Every feature is tied to a measurable outcome: usability, reliability, performance, or business value.',
   },
   {
-    label: 'Observable state',
-    text: 'Auditable transitions, measurable system health, and operational clarity across every service boundary.',
+    label: 'Ship and iterate',
+    text: 'We prioritize working releases, then improve through real usage feedback and production learnings.',
   },
 ]

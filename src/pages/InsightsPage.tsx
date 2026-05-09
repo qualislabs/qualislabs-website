@@ -6,8 +6,8 @@ function InsightsPage() {
     <>
       <PageHero
         eyebrow="Insights"
-        title="Technical briefings and field notes."
-        intro="Not blogs. These are operating memos for teams deploying intelligence where bandwidth, compliance, and system reliability shape every architectural decision."
+        title="Engineering insights from our build journey."
+        intro="Short practical notes from client delivery, product development, and experiments across AI, hardware, and modern web platforms."
         layout="stacked"
       />
 
@@ -18,7 +18,7 @@ function InsightsPage() {
             <p className="insight-type">{article.type}</p>
             <h2>{article.title}</h2>
             <p className="section-copy">{article.summary}</p>
-            <span className="insight-link">Read briefing</span>
+            <span className="insight-link">Read note</span>
           </article>
         ))}
         </div>

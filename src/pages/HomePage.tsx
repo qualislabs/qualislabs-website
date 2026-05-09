@@ -16,25 +16,25 @@ function HomePage() {
             Qualis Labs — Research Lab
           </p>
           <h1 className="hero-title">
-            <span className="hero-title-line">Private. Small.</span>
-            <span className="hero-title-line hero-title-accent">Frugal. Sustainable.</span>
+            <span className="hero-title-line">We Build Intelligent</span>
+            <span className="hero-title-line hero-title-accent">Products and Systems.</span>
           </h1>
           <p className="hero-subtitle home-hero-intro">
-            AI systems built for real devices, local teams, and constrained environments where latency,
-            reliability, and compliance matter at the same time.
+            Qualis Labs is a team of five mechatronics engineering graduates building software and
+            hardware solutions for clients while growing products like Ujuzi and Qwikeys.
           </p>
           <div className="button-row hero-landing-ctas">
             <a
               className="button button-primary"
-              href="mailto:hello@qualislabs.com?subject=Demo%20request"
+              href="mailto:hello@qualislabs.com?subject=Build%20with%20Qualis%20Labs"
             >
-              Get a Demo
+              Start a Project
               <span className="button-icon" aria-hidden>
                 →
               </span>
             </a>
             <Link className="home-text-link" to="/insights">
-              Read the Research
+              Explore Insights
             </Link>
           </div>
         </div>
@@ -43,7 +43,7 @@ function HomePage() {
       <section className="section clean-content-section home-section">
         <div className="home-section-heading">
           <p className="eyebrow">What we do</p>
-          <h2>Infrastructure for real operating conditions.</h2>
+          <h2>Engineering services for ambitious teams.</h2>
         </div>
         <div className="home-card-grid home-card-grid-3">
           {capabilities.slice(0, 3).map((capability) => (
@@ -58,8 +58,8 @@ function HomePage() {
 
       <section className="section clean-content-section home-section">
         <div className="home-section-heading">
-          <p className="eyebrow">Why we are different</p>
-          <h2>Built from first principles, not retrofits.</h2>
+          <p className="eyebrow">How we work</p>
+          <h2>A small team with end-to-end delivery mindset.</h2>
         </div>
         <div className="home-card-grid home-card-grid-3">
           {operatingPrinciples.map((item) => (
@@ -74,8 +74,8 @@ function HomePage() {
       <section className="section clean-content-section home-section">
         <div className="home-section-heading home-section-heading-row">
           <div>
-            <p className="eyebrow">Proof</p>
-            <h2>Selected systems in production.</h2>
+          <p className="eyebrow">Products and case studies</p>
+          <h2>What we are building and shipping.</h2>
           </div>
           <Link className="home-text-link" to="/projects">
             View all projects

@@ -6,8 +6,8 @@ function ProjectsPage() {
     <>
       <PageHero
         eyebrow="Projects"
-        title="Systems deployed in the real world."
-        intro="We do not build demos. Every system is designed for operational deployment and shaped around the actual failure modes of the environment it enters."
+        title="Products and systems we are actively building."
+        intro="This is where we showcase our applied engineering work across energy, mobility, and intelligent platform design."
         layout="stacked"
       />
 

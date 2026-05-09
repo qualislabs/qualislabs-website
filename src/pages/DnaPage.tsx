@@ -12,8 +12,8 @@ function DnaPage() {
     <>
       <PageHero
         eyebrow="Our DNA"
-        title="Small team. High consequence work."
-        intro="We operate with the density of a systems lab: small surface area, high accountability, and engineering decisions that hold up under production pressure."
+        title="Five mechatronics engineers. One integrated build culture."
+        intro="We are a team of five graduates in mechatronics engineering with hands-on experience across software, electronics, and intelligent product development."
         layout="stacked"
       />
 
