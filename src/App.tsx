@@ -74,22 +74,56 @@ function App() {
       </main>
 
       <footer className="site-footer">
-        <div>
-          <p className="eyebrow">Qualis Labs</p>
-          <p className="footer-copy">
-            Building intelligent products, software platforms, and hardware-enabled
-            systems from idea to deployment.
-          </p>
+        <div className="footer-inner">
+          <div className="footer-col footer-col-brand">
+            <NavLink className="brand brand-footer" to="/">
+              <span>Qualis Labs</span>
+            </NavLink>
+            <p className="footer-copy">
+              Engineering intelligent products, software platforms, and hardware-enabled
+              systems — from strategy to production.
+            </p>
+            <a
+              className="button button-primary"
+              href="mailto:hello@qualislabs.com?subject=Book%20a%20Consultation"
+            >
+              Book a Consultation
+              <span className="button-icon" aria-hidden>→</span>
+            </a>
+          </div>
+          <div className="footer-col">
+            <p className="footer-col-title">Explore</p>
+            <ul>
+              <li><NavLink to="/capabilities">Capabilities</NavLink></li>
+              <li><NavLink to="/projects">Projects</NavLink></li>
+              <li><NavLink to="/our-dna">Our DNA</NavLink></li>
+              <li><NavLink to="/insights">Insights</NavLink></li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <p className="footer-col-title">Information</p>
+            <ul>
+              <li><NavLink to="/clients-partners">Clients & Partners</NavLink></li>
+              <li><a href="mailto:hello@qualislabs.com">hello@qualislabs.com</a></li>
+              <li><span className="footer-muted">Engineering Consultancy</span></li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <p className="footer-col-title">Consultation</p>
+            <p className="footer-copy">
+              Schedule a 30-minute discovery call to discuss your project scope, architecture, or technical challenge.
+            </p>
+            <a className="footer-link-strong" href="mailto:hello@qualislabs.com">
+              hello@qualislabs.com →
+            </a>
+          </div>
         </div>
-        <div className="footer-links">
-          <a
-            className="button button-primary footer-consultation"
-            href="mailto:hello@qualislabs.com?subject=Book%20a%20Consultation"
-          >
-            Book a Consultation
-          </a>
-          <NavLink to="/clients-partners">Clients & Partners</NavLink>
-          <a href="mailto:hello@qualislabs.com">hello@qualislabs.com</a>
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()} Qualis Labs. All rights reserved.</p>
+          <div className="footer-bottom-links">
+            <span>Privacy</span>
+            <span>Terms</span>
+          </div>
         </div>
       </footer>
     </div>

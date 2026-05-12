@@ -12,8 +12,8 @@ function DnaPage() {
     <>
       <PageHero
         eyebrow="Our DNA"
-        title="Five mechatronics engineers. One integrated build culture."
-        intro="We are a team of five graduates in mechatronics engineering with hands-on experience across software, electronics, and intelligent product development."
+        title="Mechatronics expertise. Disciplined engineering culture."
+        intro="We are a specialist engineering consultancy with deep expertise across software, electronics, and intelligent product development — delivering with the rigour of seasoned professionals."
         layout="stacked"
       />
 
@@ -23,7 +23,7 @@ function DnaPage() {
           <p className="eyebrow">SWAT Model</p>
           <h2>High-density execution.</h2>
           <p className="section-copy">
-            We operate as a high-density engineering unit. No layers. No overhead. No dilution.
+            We operate as a focused, high-impact engineering practice. No layers. No overhead. No dilution.
           </p>
         </article>
         <article className="content-card">

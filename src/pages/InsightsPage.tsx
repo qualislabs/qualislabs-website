@@ -6,8 +6,8 @@ function InsightsPage() {
     <>
       <PageHero
         eyebrow="Insights"
-        title="Engineering insights from our build journey."
-        intro="Short practical notes from client delivery, product development, and experiments across AI, hardware, and modern web platforms."
+        title="Engineering perspectives from the field."
+        intro="Technical insights and thought leadership drawn from client engagements, product development, and applied research across AI, hardware, and modern platforms."
         layout="stacked"
       />
 
