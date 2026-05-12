@@ -6,8 +6,8 @@ function ProjectsPage() {
     <>
       <PageHero
         eyebrow="Projects"
-        title="Products and systems we are actively building."
-        intro="This is where we showcase our applied engineering work across energy, mobility, and intelligent platform design."
+        title="Products and platforms we've built and operate."
+        intro="A portfolio of our applied engineering work across energy, mobility, and intelligent platform design — each delivered to production."
         layout="stacked"
       />
 

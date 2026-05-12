@@ -30,30 +30,38 @@ export interface OperatingPrinciple {
   text: string
 }
 
+export interface TeamMember {
+  initials: string
+  name: string
+  role: string
+  focus: string
+  gradient: string
+}
+
 export const capabilities: Capability[] = [
   {
-    title: 'AI + Embedded Systems Engineering',
+    title: 'AI & Embedded Systems',
     description:
-      'We design intelligent systems that combine software, electronics, and controls so products can run reliably in real operating environments.',
-    details: ['Model integration for edge and cloud workloads', 'Sensor and device data pipelines', 'Production-ready APIs and backend services'],
+      'We architect intelligent systems that unify software, electronics, and controls — engineered to perform reliably in mission-critical environments.',
+    details: ['Edge & cloud AI model deployment', 'Sensor data pipelines & telemetry', 'Production-grade APIs & backend services'],
   },
   {
-    title: 'Product Engineering for Startups and Teams',
+    title: 'Product Engineering',
     description:
-      'From idea to launch, we help teams scope, build, and ship products with clean architecture, maintainable code, and a roadmap for scale.',
-    details: ['Web and mobile application development', 'Product architecture and MVP planning', 'Delivery support from prototype to launch'],
+      'From concept to launch, we partner with organisations to scope, build, and ship products with clean architecture, maintainable codebases, and a clear roadmap for scale.',
+    details: ['Web & mobile application development', 'Product architecture & roadmap planning', 'End-to-end delivery from prototype to production'],
   },
   {
-    title: 'Automation and Data-Driven Workflows',
+    title: 'Automation & Analytics',
     description:
-      'We automate repetitive operations and turn scattered data into systems that support faster decisions and better service quality.',
-    details: ['Operational dashboards and analytics tooling', 'Workflow automation and integrations', 'Alerting, monitoring, and reporting systems'],
+      'We automate complex operations and transform fragmented data into decision-ready systems that drive efficiency and accelerate service delivery.',
+    details: ['Operational dashboards & BI tooling', 'Workflow automation & integrations', 'Real-time alerting, monitoring & reporting'],
   },
   {
-    title: 'IoT, Robotics, and Hardware Prototyping',
+    title: 'IoT & Hardware Prototyping',
     description:
-      'Our mechatronics background lets us build beyond pure software: connected devices, control systems, and hardware-aware platforms.',
-    details: ['IoT device integration and telemetry systems', 'Embedded software and control logic', 'Rapid prototyping for product validation'],
+      'Our mechatronics expertise enables us to deliver beyond pure software — connected devices, control systems, and hardware-aware platforms.',
+    details: ['IoT device integration & telemetry', 'Embedded software & control logic', 'Rapid prototyping & product validation'],
   },
 ]
 
@@ -61,75 +69,106 @@ export const projects: Project[] = [
   {
     name: 'Ujuzi',
     tag: 'Energy Intelligence Platform',
-    headline: 'Smart Monitoring and Forecasting for Microgrids',
+    headline: 'Intelligent Monitoring & Forecasting for Microgrids',
     description:
-      'Ujuzi is our energy project focused on monitoring, forecasting, and optimization for renewable and community microgrids. It combines IoT telemetry, predictive analytics, and actionable insights for operators and communities.',
-    markers: ['Real-time energy monitoring', 'AI-assisted demand prediction', 'Designed for practical field deployment'],
-    impact: 'Better visibility, better planning, and more efficient energy usage.',
+      'Ujuzi is our energy intelligence platform that delivers real-time monitoring, predictive forecasting, and operational optimization for renewable and community microgrids — combining IoT telemetry with actionable analytics.',
+    markers: ['Real-time energy monitoring dashboards', 'AI-powered demand forecasting', 'Engineered for practical field deployment'],
+    impact: 'Improved visibility, optimized planning, and measurably efficient energy consumption.',
   },
   {
     name: 'Qwikeys',
     tag: 'Mobility Marketplace Platform',
-    headline: 'Peer-to-Peer Car Sharing Built for Trust and Speed',
+    headline: 'Peer-to-Peer Car Sharing Built for Trust & Scale',
     description:
-      'Qwikeys is our car hiring platform that connects vehicle owners and renters through a simple, secure booking experience. The product is designed for scale, trust, and smooth operations.',
-    markers: ['Marketplace booking workflows', 'Trust and safety-first product design', 'Built for growth across local markets'],
-    impact: 'Faster rentals, better host utilization, and a cleaner mobility experience.',
+      'Qwikeys connects vehicle owners and renters through a seamless, trust-centered booking experience — designed for operational scale, safety, and smooth transactions.',
+    markers: ['End-to-end marketplace booking workflows', 'Trust & safety-first product architecture', 'Built for multi-market growth'],
+    impact: 'Faster rentals, higher host utilization, and a frictionless mobility experience.',
   },
 ]
 
 export const partnerCategories: PartnerCategory[] = [
   {
     title: 'Client Product Builds',
-    description: 'We partner with founders and teams to build digital products people can use, trust, and pay for.',
-    references: ['MVP and production system delivery', 'Feature expansion and performance improvements', 'Long-term engineering support'],
+    description: 'We collaborate with founders and enterprise teams to design and deliver digital products that users trust, adopt, and scale with.',
+    references: ['Production system design & delivery', 'Feature expansion & performance engineering', 'Long-term technical partnership & advisory'],
   },
   {
-    title: 'Energy and Sustainability',
-    description: 'Our Ujuzi work demonstrates how data and AI can support practical renewable energy management.',
-    references: ['Telemetry capture and monitoring', 'Forecasting and operational insights', 'Community-focused deployment thinking'],
+    title: 'Energy & Sustainability',
+    description: 'Our Ujuzi platform demonstrates how data-driven intelligence and AI transform operational renewable energy management at scale.',
+    references: ['Telemetry capture & real-time monitoring', 'Predictive forecasting & operational insights', 'Field-proven deployment strategies'],
   },
   {
-    title: 'Mobility and Marketplaces',
-    description: 'With Qwikeys, we are building product capabilities for high-trust transactional platforms.',
-    references: ['Booking and availability systems', 'Identity and trust UX patterns', 'Marketplace operations tooling'],
+    title: 'Mobility & Marketplaces',
+    description: 'With Qwikeys, we are pioneering product capabilities for high-trust, high-frequency transactional platforms.',
+    references: ['Booking & availability engines', 'Identity verification & trust UX', 'Marketplace operations tooling'],
   },
   {
-    title: 'Research and Prototyping',
-    description: 'We continue to explore practical R&D across AI, robotics, and intelligent systems inspired by our early lab projects.',
-    references: ['Rapid concept validation', 'Hardware-software integration experiments', 'Applied research into usable products'],
+    title: 'Research & Prototyping',
+    description: 'We invest in applied R&D across AI, robotics, and intelligent systems — translating frontier research into production-ready solutions.',
+    references: ['Rapid concept validation', 'Hardware-software integration R&D', 'Research-to-production delivery'],
   },
 ]
 
 export const insights: Insight[] = [
   {
-    title: 'What We Learned Building Ujuzi for Real-World Energy Operations',
-    type: 'Field Notes',
-    summary: 'A practical breakdown of telemetry quality, forecasting trade-offs, and deployment decisions that matter when systems run outside ideal lab conditions.',
+    title: 'Lessons from Building Ujuzi for Real-World Energy Operations',
+    type: 'Field Report',
+    summary: 'A practical breakdown of telemetry quality, forecasting trade-offs, and deployment decisions that matter when systems operate outside controlled lab conditions.',
   },
   {
-    title: 'How We Approach Product Architecture for Early-Stage Teams',
-    type: 'Engineering Memo',
-    summary: 'How we balance speed and maintainability when helping clients move from idea to reliable first release.',
+    title: 'Our Approach to Product Architecture for Early-Stage Teams',
+    type: 'Engineering Brief',
+    summary: 'How we balance velocity and maintainability when helping clients navigate from initial idea to a reliable, scalable first release.',
   },
   {
-    title: 'Designing Trust Layers in Mobility Platforms like Qwikeys',
-    type: 'Product Brief',
-    summary: 'Patterns for booking flows, user verification, and operational safeguards that improve confidence for both hosts and renters.',
+    title: 'Engineering Trust Layers in Mobility Platforms',
+    type: 'Product Analysis',
+    summary: 'Proven patterns for booking flows, user verification, and operational safeguards that build confidence for both hosts and renters.',
+  },
+]
+
+export const teamMembers: TeamMember[] = [
+  {
+    initials: 'SE',
+    name: 'Senior Software Engineer',
+    role: 'Platform & Backend',
+    focus: 'APIs, data pipelines, cloud infrastructure',
+    gradient: 'linear-gradient(135deg, #1b4fb1 0%, #3b71fe 100%)',
+  },
+  {
+    initials: 'EE',
+    name: 'Embedded Systems Engineer',
+    role: 'Devices & Firmware',
+    focus: 'Microcontrollers, sensors, control logic',
+    gradient: 'linear-gradient(135deg, #4338ca 0%, #6366f1 100%)',
+  },
+  {
+    initials: 'PE',
+    name: 'Product Engineer',
+    role: 'Web & Mobile',
+    focus: 'User-facing experiences, frontend systems',
+    gradient: 'linear-gradient(135deg, #0e7490 0%, #22d3ee 100%)',
+  },
+  {
+    initials: 'HE',
+    name: 'Hardware Engineer',
+    role: 'Electronics & Prototyping',
+    focus: 'PCB design, instrumentation, mechatronics',
+    gradient: 'linear-gradient(135deg, #0b0d17 0%, #1b4fb1 100%)',
   },
 ]
 
 export const operatingPrinciples: OperatingPrinciple[] = [
   {
-    label: 'Systems thinking',
-    text: 'We design software, electronics, and operations as one connected system, not separate silos.',
+    label: 'Systems Thinking',
+    text: 'We architect software, electronics, and operations as one integrated system — not disconnected silos.',
   },
   {
-    label: 'Build with intent',
-    text: 'Every feature is tied to a measurable outcome: usability, reliability, performance, or business value.',
+    label: 'Build with Intent',
+    text: 'Every feature we ship is tied to a measurable outcome: usability, reliability, performance, or business value.',
   },
   {
-    label: 'Ship and iterate',
-    text: 'We prioritize working releases, then improve through real usage feedback and production learnings.',
+    label: 'Ship & Iterate',
+    text: 'We prioritize working releases, then refine continuously through real usage data and production learnings.',
   },
 ]

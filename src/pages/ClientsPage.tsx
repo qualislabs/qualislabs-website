@@ -12,8 +12,8 @@ function ClientsPage() {
     <>
       <PageHero
         eyebrow="Clients & Partners"
-        title="Teams we build with and sectors we support."
-        intro="We work with founders, businesses, and institutions that need dependable engineering partners for both client-facing products and internal systems."
+        title="Clients we serve and sectors we specialise in."
+        intro="We partner with founders, enterprises, and institutions that demand rigorous engineering execution for both client-facing products and critical internal systems."
       />
 
       <section className="section partner-grid">

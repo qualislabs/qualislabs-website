@@ -6,8 +6,8 @@ function CapabilitiesPage() {
     <>
       <PageHero
         eyebrow="Capabilities"
-        title="What Qualis Labs can build with you."
-        intro="We combine software engineering, embedded systems expertise, and product thinking to help clients move from concept to reliable deployment."
+        title="Engineering capabilities built for complex challenges."
+        intro="We combine deep software engineering, embedded systems expertise, and strategic product thinking to take organisations from concept to reliable, scalable deployment."
         layout="stacked"
       />
 
