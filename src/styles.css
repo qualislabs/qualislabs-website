@@ -26,6 +26,7 @@
   --accent-hover: #1e40af;
   --accent-soft: rgba(29, 78, 216, 0.08);
   --accent-on-dark: #5b8cff;
+  --brand-logo: #66e2da;
   --success: #19c37d;
   --shadow-sm: 0 1px 2px rgba(11, 18, 36, 0.04);
   --shadow-md: 0 8px 24px rgba(11, 18, 36, 0.06);
@@ -115,23 +116,34 @@ body,
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   color: var(--text);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  transition: opacity 0.2s ease;
 }
 
-.brand::before {
-  content: "";
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
-  background:
-    linear-gradient(135deg, #4f7bff 0%, #1d4ed8 100%);
-  box-shadow: 0 4px 10px rgba(29, 78, 216, 0.28);
-  position: relative;
+.brand:hover {
+  opacity: 0.9;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-logo);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.brand:hover .logo-container {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.logo-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 4px rgba(29, 78, 216, 0.15));
 }
 
 .site-nav {
@@ -140,6 +152,23 @@ body,
   gap: 28px;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.brand span {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--text) 0%, var(--muted) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-footer span {
+  background: linear-gradient(135deg, var(--text-on-dark) 0%, var(--muted-on-dark) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-link {
@@ -1726,6 +1755,25 @@ h3 {
   max-width: 42ch;
 }
 
+.footer-social-row {
+  display: flex;
+  gap: 16px;
+  margin: -4px 0 4px;
+}
+
+.footer-social-icon {
+  color: var(--muted-on-dark);
+  transition: color 220ms ease, transform 220ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-icon:hover {
+  color: var(--accent-on-dark);
+  transform: translateY(-2px);
+}
+
 .footer-bottom {
   max-width: var(--max-width);
   margin: 48px auto 0;
@@ -2016,6 +2064,7 @@ h3 {
   --accent: #5b8cff;
   --accent-hover: #7ba1ff;
   --accent-soft: rgba(91, 140, 255, 0.12);
+  --brand-logo: #66e2da;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.5);
