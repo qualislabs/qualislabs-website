@@ -11,6 +11,7 @@ export interface Project {
   description: string
   markers: string[]
   impact: string
+  link?: string
 }
 
 export interface PartnerCategory {
@@ -22,6 +23,14 @@ export interface PartnerCategory {
 export interface Insight {
   title: string
   type: string
+  summary: string
+  link?: string
+}
+
+export interface Award {
+  title: string
+  organization: string
+  year: string
   summary: string
 }
 
@@ -67,6 +76,20 @@ export const capabilities: Capability[] = [
 
 export const projects: Project[] = [
   {
+    name: 'Qwikeys',
+    tag: 'Mobility Marketplace Platform',
+    headline: "Africa's Peer-to-Peer Car Sharing Marketplace",
+    description:
+      "Qwikeys is our flagship mobility platform that enables vehicle owners to turn their cars into businesses. It's built on a high-trust, peer-to-peer model that provides renters with a seamless, safe, and affordable way to find the perfect ride.",
+    markers: [
+      'Comprehensive trust & safety-first product architecture',
+      'Automated host tools & insurance protection layers',
+      'Engineered for continental scale and multi-market growth',
+    ],
+    impact: 'Empowering car owners across Africa with sustainable income streams while redefining regional mobility.',
+    link: 'https://qwikeys.com/',
+  },
+  {
     name: 'Ujuzi',
     tag: 'Energy Intelligence Platform',
     headline: 'Intelligent Monitoring & Forecasting for Microgrids',
@@ -76,13 +99,17 @@ export const projects: Project[] = [
     impact: 'Improved visibility, optimized planning, and measurably efficient energy consumption.',
   },
   {
-    name: 'Qwikeys',
-    tag: 'Mobility Marketplace Platform',
-    headline: 'Peer-to-Peer Car Sharing Built for Trust & Scale',
+    name: 'Mavuno Link',
+    tag: 'Agri-Tech & Supply Chain',
+    headline: 'Digital Marketplace for Post-Harvest Loss Mitigation',
     description:
-      'Qwikeys connects vehicle owners and renters through a seamless, trust-centered booking experience — designed for operational scale, safety, and smooth transactions.',
-    markers: ['End-to-end marketplace booking workflows', 'Trust & safety-first product architecture', 'Built for multi-market growth'],
-    impact: 'Faster rentals, higher host utilization, and a frictionless mobility experience.',
+      'Mavuno Link is a multi-interface platform (Web, Mobile, USSD, SMS) that connects farmers directly to buyers and drivers, eliminating inefficient middlemen and drastically reducing post-harvest food waste.',
+    markers: [
+      'Regional Winner of the 2021 IBM Call for Code Global Challenge',
+      'Low-bandwidth accessible via USSD & SMS integration',
+      'AI-powered route optimization for perishables delivery',
+    ],
+    impact: 'Tackling the 5.2 million tonnes of annual food loss in Kenya while economically empowering smallholder farmers.',
   },
 ]
 
@@ -109,6 +136,15 @@ export const partnerCategories: PartnerCategory[] = [
   },
 ]
 
+export const awards: Award[] = [
+  {
+    title: 'Regional Winner (Middle East & Africa)',
+    organization: 'IBM Call for Code Global Challenge',
+    year: '2021',
+    summary: 'Recognized for developing Mavuno Link, an intelligent platform addressing the UN Zero Hunger goal by reducing post-harvest food waste through direct farmer-to-buyer connectivity.',
+  },
+]
+
 export const insights: Insight[] = [
   {
     title: 'Lessons from Building Ujuzi for Real-World Energy Operations',
@@ -124,6 +160,18 @@ export const insights: Insight[] = [
     title: 'Engineering Trust Layers in Mobility Platforms',
     type: 'Product Analysis',
     summary: 'Proven patterns for booking flows, user verification, and operational safeguards that build confidence for both hosts and renters.',
+  },
+  {
+    title: 'Kenya-based team named top Call for Code solution winner',
+    type: 'News',
+    summary: 'The Star covers Qualis Labs’ regional win in the 2021 IBM Call for Code Global Challenge for tackling food waste in Kenya.',
+    link: 'https://www.the-star.co.ke/counties/2021-11-30-kenya-based-team-named-top-call-for-code-solution-winner',
+  },
+  {
+    title: 'Kenyan team wins regional IBM award for food waste solution',
+    type: 'News',
+    summary: 'Africa Business Communities highlights how Mavuno Link uses IBM Cloud and Watson to reduce post-harvest losses.',
+    link: 'https://africabusinesscommunities.com/tech-24/kenyan-team-wins-regional-ibm-award-for-developing-solution-to-help-reduce-food-waste/',
   },
 ]
 

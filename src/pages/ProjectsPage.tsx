@@ -20,7 +20,14 @@ function ProjectsPage() {
                 <p className="eyebrow">{project.tag}</p>
                 <h2>{project.headline}</h2>
               </div>
-              <p className="project-name">{project.name}</p>
+              <div className="project-meta-col">
+                <p className="project-name">{project.name}</p>
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link-sm">
+                    Visit Platform <span aria-hidden>↗</span>
+                  </a>
+                )}
+              </div>
             </div>
             <div className="stack-md">
               <p className="section-copy">{project.description}</p>

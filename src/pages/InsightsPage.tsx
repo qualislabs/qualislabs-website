@@ -18,7 +18,13 @@ function InsightsPage() {
             <p className="insight-type">{article.type}</p>
             <h2>{article.title}</h2>
             <p className="section-copy">{article.summary}</p>
-            <span className="insight-link">Read note</span>
+            {article.link ? (
+              <a href={article.link} target="_blank" rel="noopener noreferrer" className="insight-link">
+                Read article <span aria-hidden>↗</span>
+              </a>
+            ) : (
+              <span className="insight-link">Read note</span>
+            )}
           </article>
         ))}
         </div>

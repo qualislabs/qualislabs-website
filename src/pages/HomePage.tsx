@@ -5,15 +5,16 @@ import {
   operatingPrinciples,
   projects,
   teamMembers,
+  awards,
 } from '../data/siteContent'
 
 const capabilityIcons = ['◆', '◈', '◉', '◇']
 
 const stats = [
   { value: '5+', label: 'Years of engineering experience' },
-  { value: '2', label: 'Proprietary platforms' },
+  { value: '3', label: 'Proprietary platforms' },
   { value: '10+', label: 'Client engagements delivered' },
-  { value: '100%', label: 'Full-stack delivery capability' },
+  { value: '2021', label: 'IBM Call for Code Winner' },
 ]
 
 const partnerSignals = [
@@ -154,6 +155,29 @@ function HomePage() {
         </div>
       </section>
 
+      {/* ============ RECOGNITION ============ */}
+      <section className="section section-soft awards-section">
+        <div className="home-section">
+          <div className="home-section-heading home-section-heading-centered">
+            <p className="eyebrow">Recognition</p>
+            <h2>Global validation of our engineering impact.</h2>
+          </div>
+          <div className="awards-grid">
+            {awards.map((award) => (
+              <div className="award-card" key={award.title}>
+                <div className="award-content">
+                  <div className="award-top">
+                    <p className="micro-label">{award.organization} · {award.year}</p>
+                    <h3>{award.title}</h3>
+                  </div>
+                  <p className="section-copy">{award.summary}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ============ CASE STUDIES (large image cards) ============ */}
       <section className="section">
         <div className="home-section">
@@ -167,19 +191,34 @@ function HomePage() {
             </Link>
           </div>
           <div className="home-card-grid home-card-grid-2">
-            {projects.slice(0, 2).map((project, i) => (
-              <Link to="/projects" className="case-card" key={project.name}>
-                <div className="case-card-cover" style={{ background: projectGradients[i % 2] }}>
-                  <span className="case-card-tag">{project.tag}</span>
-                  <span className="case-card-name">{project.name}</span>
-                </div>
-                <div className="case-card-body">
-                  <h3>{project.headline}</h3>
-                  <p className="section-copy">{project.impact}</p>
-                  <span className="insight-link">Read case study</span>
-                </div>
-              </Link>
-            ))}
+            {projects.slice(0, 2).map((project, i) => {
+              const isExternal = !!project.link;
+              return isExternal ? (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="case-card" key={project.name}>
+                  <div className="case-card-cover" style={{ background: projectGradients[i % 2] }}>
+                    <span className="case-card-tag">{project.tag}</span>
+                    <span className="case-card-name">{project.name}</span>
+                  </div>
+                  <div className="case-card-body">
+                    <h3>{project.headline}</h3>
+                    <p className="section-copy">{project.impact}</p>
+                    <span className="insight-link">Visit platform <span aria-hidden>↗</span></span>
+                  </div>
+                </a>
+              ) : (
+                <Link to="/projects" className="case-card" key={project.name}>
+                  <div className="case-card-cover" style={{ background: projectGradients[i % 2] }}>
+                    <span className="case-card-tag">{project.tag}</span>
+                    <span className="case-card-name">{project.name}</span>
+                  </div>
+                  <div className="case-card-body">
+                    <h3>{project.headline}</h3>
+                    <p className="section-copy">{project.impact}</p>
+                    <span className="insight-link">Read case study</span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -266,7 +305,13 @@ function HomePage() {
                 </div>
                 <h3>{article.title}</h3>
                 <p className="section-copy">{article.summary}</p>
-                <span className="insight-link">Read note</span>
+                {article.link ? (
+                  <a href={article.link} target="_blank" rel="noopener noreferrer" className="insight-link">
+                    Read article <span aria-hidden>↗</span>
+                  </a>
+                ) : (
+                  <span className="insight-link">Read note</span>
+                )}
               </article>
             ))}
           </div>
