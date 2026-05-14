@@ -94,9 +94,10 @@ export const projects: Project[] = [
     tag: 'Energy Intelligence Platform',
     headline: 'Intelligent Monitoring & Forecasting for Microgrids',
     description:
-      'Ujuzi is our energy intelligence platform that delivers real-time monitoring, predictive forecasting, and operational optimization for renewable and community microgrids — combining IoT telemetry with actionable analytics.',
+      'Formerly Pawa Yangu, Ujuzi is our energy intelligence platform that delivers real-time monitoring, predictive forecasting, and operational optimization for renewable and community microgrids — combining IoT telemetry with actionable analytics.',
     markers: ['Real-time energy monitoring dashboards', 'AI-powered demand forecasting', 'Engineered for practical field deployment'],
     impact: 'Improved visibility, optimized planning, and measurably efficient energy consumption.',
+    link: 'https://x.com/pawayangu',
   },
   {
     name: 'Mavuno Link',
@@ -110,6 +111,20 @@ export const projects: Project[] = [
       'AI-powered route optimization for perishables delivery',
     ],
     impact: 'Tackling the 5.2 million tonnes of annual food loss in Kenya while economically empowering smallholder farmers.',
+  },
+  {
+    name: 'Qualis Vision',
+    tag: 'Assistive Tech (R&D)',
+    headline: 'Intelligent Wearable for the Visually Impaired',
+    description:
+      'One of our founding research projects, Qualis Vision is an innovative wearable device designed to assist the blind and visually impaired in navigating their daily lives through computer vision and audio feedback.',
+    markers: [
+      'Real-time emotion detection & scene description',
+      'Integrated OCR for instant text-to-speech reading',
+      'Early-stage hardware-software integration prototype',
+    ],
+    impact: 'Demonstrated the potential of computer vision in assistive technology, laying the groundwork for our mechatronics focus.',
+    link: 'https://x.com/jkuattechexpo/status/1233332667363536896',
   },
 ]
 
@@ -131,8 +146,8 @@ export const partnerCategories: PartnerCategory[] = [
   },
   {
     title: 'Research & Prototyping',
-    description: 'We invest in applied R&D across AI, robotics, and intelligent systems — translating frontier research into production-ready solutions.',
-    references: ['Rapid concept validation', 'Hardware-software integration R&D', 'Research-to-production delivery'],
+    description: 'We invest in applied R&D across AI, robotics, and intelligent systems — starting with founding projects like Qualis Vision to translate frontier research into production-ready solutions.',
+    references: ['Rapid concept validation', 'Hardware-software integration R&D (e.g. Qualis Vision)', 'Research-to-production delivery'],
   },
 ]
 
