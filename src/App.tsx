@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { NavLink, Route, Routes, useLocation, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTheme } from "./hooks/useTheme";
 import HomePage from "./pages/HomePage";
@@ -72,6 +72,10 @@ function App() {
           <Route path="/clients-partners" element={<ClientsPage />} />
           <Route path="/our-dna" element={<DnaPage />} />
           <Route path="/insights" element={<InsightsPage />} />
+          {/* Handle legacy index.html links from search engines */}
+          <Route path="/index.html" element={<Navigate to="/" replace />} />
+          {/* Catch-all: Redirect unknown routes to home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
 
